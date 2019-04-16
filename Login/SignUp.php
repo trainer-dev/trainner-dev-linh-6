@@ -53,7 +53,7 @@ if(isset($_POST["signup"])) {
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["REQUEST_URI"]);?>">
 
             Email:<br>
-            <input type="email" name="email" placeholder="Please enter your email" required>
+            <input type="email" name="email"  <?php if(isset($_SESSION['email'])) echo "value=".$_SESSION['email']; else echo "placeholder = 'Please enter your email'" ?> required>
 
             Password: <br>
             <input type="password" name="password" placeholder="Enter your password" required><br>
@@ -66,7 +66,7 @@ if(isset($_POST["signup"])) {
             <input type="text" name="fullname" placeholder="Enter your fullname" pattern="[a-zA-Z]{1,}" required><br>
 
             Username:<br>
-            <input type="text" name="username" placeholder="Enter your username"required><br>
+            <input type="text" name="username" <?php if(isset($_SESSION['uname'])) echo "value=".$_SESSION['uname']; else echo "placeholder = 'Please enter your username'" ?> required><br>
 
             Phone number: <br>
             <input type="text" name="phone" id="phone" placeholder="Enter your phone numbers" pattern="[0-9]{1,}" required>

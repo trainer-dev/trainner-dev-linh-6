@@ -64,8 +64,8 @@ class User{
     {
         //Checking for User login or not
         if (isset($_REQUEST['signup'])) {
-
             $email = $_POST['email'];
+            $_SESSION['email'] = $email;
 
             $password = $_POST["password"];
 
@@ -74,6 +74,7 @@ class User{
             $phone = $_POST['phone'];
 
             $username = $_POST['username'];
+            $_SESSION['uname'] = $username;
 
             $avatar = $_POST['avatar'];
 
@@ -86,6 +87,8 @@ class User{
             $signUp = $this->getSignUp($email, $username, $password, $fullname, $phone, $avatar,$des,$user);
 
             if ($signUp) {
+                unset($_SESSION['email']);
+                unset($_SESSION['uname']);
                 $success = 'Sign in successful';
                 echo "<p><span class='error'>" . $success . "</span></p><br>";
             } else {
