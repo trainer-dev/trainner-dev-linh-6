@@ -49,14 +49,11 @@ class User{
             $sqlInsertDB = 'INSERT INTO users SET email="' . strtolower($email) . '", password = "'
                 . strtolower($password) . '",username= "' . $username. '",fullname="'.$fullname.'",phone="'.$phone.'",avatar="'
                 .$avatar.'", type="'.$type.'",date='.$date.',description="'.$des.'",introUser="'.$user.'"';
-            if (mysqli_query($this->db, $sqlInsertDB)) {
-                return true;
-            } else {
-                return false;
-            }
-
-        } else {
+            mysqli_query($this->db, $sqlInsertDB);
             return false;
+        }
+        else {
+            return true;
         }
     }
 
