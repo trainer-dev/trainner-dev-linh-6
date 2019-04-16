@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-image: url("../Asset/image/bg.png") ;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.signup{
+    margin: auto;
+    width: 410px;
+    height: auto;
+    border: 1px solid #000000;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px #222;
+    background: white;
+}
+
+.signin{
+    margin: auto;
+    margin-top: 225px;
+    width: 410px;
+    height: auto;
+    border: 1px solid #000000;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px #222;
+    background: white;
+}
+
+h2{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+    background: white;
+}
+
+h5{
+    text-align: center;
+    margin-bottom: 25px;
+    background: white;
+}
+
+form{
+    margin:  0 ;
+    background: white;
+}
+
+input[type = email], select {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    background: white;
+}
+
+input[type = password], select {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    background: white;
+}
+
+input[type = text], select {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    background: white;
+}
+
+input[type = tel], select {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    background: white;
+}
+
+input[type=submit] {
+    width: 30%;
+    background: #e2494b;
+    color: white;
+    padding: 15px 0;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 150px;
+}
+
+input[type=file] {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    background: white;
+}
+
+p{
+    text-align: center;
+    padding: 5px 0;
+    background: white;
+}
+
+a{
+    background: white;
+}
+
+.error {
+    color:red;
+    padding: 10px 10px;
+    background: white;
+}
+
+.success{
+    color: green;
+    padding: 10px 10px;
+    background: white;
+}
+
