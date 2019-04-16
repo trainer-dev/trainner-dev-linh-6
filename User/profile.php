@@ -34,11 +34,13 @@ $conn = mysqli_connect('localhost', 'linh', 'Rinkute_98', 'linh');
 
                 <?php
                 session_start();
-
-                echo "<li><a href='../Login/logout.php'>Log out</a>";
-
-
-                echo "<li><a href='index.php?number=10&submit=go'>Home Page</a></li>";
+                if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+                    echo "<li><a href='index.php?number=10&submit=go'>Home Page</a></li>";
+                }
+                else {
+                    echo "<li><a href='../Login/logout.php'>Log out</a>";
+                    echo "<li><a href='index.php?number=10&submit=go'>Home Page</a></li>";
+                }
                 ?>
 
             </ul>

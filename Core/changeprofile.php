@@ -59,7 +59,7 @@ class Profile
             } else {
                 // Registration Failed
                 $fail = 'Change profile failed. Account already not exits, please try again.';
-                echo "<p><span class='error'>" . $fail . "</span></p><br>";
+                echo "<p><span class='error' style='color: red;'>" . $fail . "</span></p><br>";
             };
         }
     }
