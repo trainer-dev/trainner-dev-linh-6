@@ -29,11 +29,17 @@ if(isset($_POST["signup"])) {
 
     $avatar = $_POST['avatar'];
 
+
     $des = $_POST['description'];
 
     $userIntro = $_POST['introUser'];
 
-    $user->getSignUp($email,$username,$password,$fullname,$phone, $avatar,$des,$userIntro);
+    if($avatar==''){
+        $avanull = "../Asset/image/avatar";
+        $user->getSignUp($email,$username,$password,$fullname,$phone, $avanull,$des,$userIntro);
+    }
+    else
+        $user->getSignUp($email,$username,$password,$fullname,$phone, $avatar,$des,$userIntro);
 }
 
 ?>

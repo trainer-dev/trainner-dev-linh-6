@@ -39,6 +39,7 @@ $conn = mysqli_connect('localhost', 'linh', 'Rinkute_98', 'linh');
                 }
                 else {
                     echo "<li><a href='../Login/logout.php'>Log out</a>";
+
                     echo "<li><a href='index.php?number=10&submit=go'>Home Page</a></li>";
                 }
                 ?>
@@ -58,7 +59,9 @@ $conn = mysqli_connect('localhost', 'linh', 'Rinkute_98', 'linh');
             $profile->profile();
 
             ?>
-            <img src="<?php ?>">
+            <?php
+                echo "<img src=".$select['avatar'].">"
+            ?>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>" id="profile">
                 <?php
                     if(isset($msg))
