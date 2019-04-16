@@ -54,8 +54,8 @@ class Profile
             $change = $this->getChange($username, $fullname, $phone ,$des, $user);
 
             if ($change) {
-                $success = 'Change profile successful';
-                echo "<p><span class='error'>" . $success . "</span></p><br>";
+                $success = 'Change profile successful!';
+                echo "<p><span class='error' style='color: green'>" . $success . "</span></p><br>";
             } else {
                 // Registration Failed
                 $fail = 'Change profile failed. Account already not exits, please try again.';
